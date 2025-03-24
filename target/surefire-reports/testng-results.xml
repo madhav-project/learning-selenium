@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-16T19:03:06 IST" name="Suite" finished-at="2025-03-16T19:03:23 IST" duration-ms="17658">
+    <groups>
+    </groups>
+    <test started-at="2025-03-16T19:03:06 IST" name="Test" finished-at="2025-03-16T19:03:23 IST" duration-ms="17658">
+      <class name="mvpautomation.OrangeHRMTest">
+        <test-method signature="loginApp(java.lang.String,java.lang.String)[pri:0, instance:mvpautomation.OrangeHRMTest@67a20f67]" started-at="2025-03-16T19:03:06 IST" name="loginApp" finished-at="2025-03-16T19:03:13 IST" duration-ms="7377" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApp -->
+        <test-method signature="clickDirectory(java.lang.String)[pri:0, instance:mvpautomation.OrangeHRMTest@67a20f67]" started-at="2025-03-16T19:03:13 IST" name="clickDirectory" finished-at="2025-03-16T19:03:17 IST" depends-on-methods="mvpautomation.OrangeHRMTest.loginApp" duration-ms="4112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[radha]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clickDirectory -->
+        <test-method signature="logout()[pri:0, instance:mvpautomation.OrangeHRMTest@67a20f67]" started-at="2025-03-16T19:03:17 IST" name="logout" finished-at="2025-03-16T19:03:22 IST" depends-on-methods="mvpautomation.OrangeHRMTest.loginApp" duration-ms="4198" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method signature="closeBrowser()[pri:0, instance:mvpautomation.OrangeHRMTest@67a20f67]" started-at="2025-03-16T19:03:22 IST" name="closeBrowser" finished-at="2025-03-16T19:03:23 IST" depends-on-methods="mvpautomation.OrangeHRMTest.logout" duration-ms="1877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- mvpautomation.OrangeHRMTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
