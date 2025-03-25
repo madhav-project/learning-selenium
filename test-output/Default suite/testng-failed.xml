@@ -5,8 +5,6 @@
     <classes>
       <class name="mvpautomation.OrangeHRMTest">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="logout"/>
           <include name="clickDirectory"/>
           <include name="loginApp"/>
         </methods>

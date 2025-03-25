@@ -1,31 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="1" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-03-20T23:52:31 IST" name="Suite" finished-at="2025-03-20T23:52:39 IST" duration-ms="8294">
+  <suite started-at="2025-03-24T21:51:03 IST" name="Default suite" finished-at="2025-03-24T21:51:03 IST" duration-ms="122">
     <groups>
     </groups>
-    <test started-at="2025-03-20T23:52:31 IST" name="Test" finished-at="2025-03-20T23:52:39 IST" duration-ms="8294">
-      <class name="com.orangehrm.test.HomePageTest">
-        <test-method signature="logout()[pri:0, instance:com.orangehrm.test.HomePageTest@74235045]" started-at="2025-03-20T23:52:34 IST" name="logout" finished-at="2025-03-20T23:52:39 IST" duration-ms="5139" status="PASS">
+    <test started-at="2025-03-24T21:51:03 IST" name="Default test" finished-at="2025-03-24T21:51:03 IST" duration-ms="122">
+      <class name="mvpautomation.OrangeHRMTest">
+        <test-method signature="loginApp(java.lang.String,java.lang.String)[pri:0, instance:mvpautomation.OrangeHRMTest@4218d6a3]" started-at="2025-03-24T21:51:03 IST" name="loginApp" finished-at="2025-03-24T21:51:03 IST" duration-ms="0" status="FAIL">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'username' is required by @Test on method loginApp but has not been marked @Optional or defined
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--25130997\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'username' is required by @Test on method loginApp but has not been marked @Optional or defined
+in C:\Users\user\AppData\Local\Temp\testng-eclipse--25130997\testng-customsuite.xml
+at org.testng.internal.Parameters.createParams(Parameters.java:267)
+at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:355)
+at org.testng.internal.Parameters.createParameters(Parameters.java:693)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:888)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:737)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:915)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logout -->
-      </class> <!-- com.orangehrm.test.HomePageTest -->
-      <class name="com.orangehrm.test.LoginTest">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:com.orangehrm.test.LoginTest@41d477ed]" started-at="2025-03-20T23:52:23 IST" name="initDriver" finished-at="2025-03-20T23:52:31 IST" duration-ms="7791" status="PASS">
+        </test-method> <!-- loginApp -->
+        <test-method signature="clickDirectory(java.lang.String)[pri:0, instance:mvpautomation.OrangeHRMTest@4218d6a3]" started-at="2025-03-24T21:51:03 IST" name="clickDirectory" finished-at="2025-03-24T21:51:03 IST" depends-on-methods="mvpautomation.OrangeHRMTest.loginApp" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method mvpautomation.OrangeHRMTest.clickDirectory() on instance mvpautomation.OrangeHRMTest@4218d6a3 depends on not successfully finished methods 
+[mvpautomation.OrangeHRMTest.loginApp() on instance mvpautomation.OrangeHRMTest@4218d6a3]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method mvpautomation.OrangeHRMTest.clickDirectory() on instance mvpautomation.OrangeHRMTest@4218d6a3 depends on not successfully finished methods 
+[mvpautomation.OrangeHRMTest.loginApp() on instance mvpautomation.OrangeHRMTest@4218d6a3]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:157)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1228)
+at org.testng.TestNG.runSuites(TestNG.java:1134)
+at org.testng.TestNG.run(TestNG.java:1101)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method signature="loginWithValidUsernameAndPassword()[pri:0, instance:com.orangehrm.test.LoginTest@41d477ed]" started-at="2025-03-20T23:52:31 IST" name="loginWithValidUsernameAndPassword" finished-at="2025-03-20T23:52:34 IST" duration-ms="3093" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginWithValidUsernameAndPassword -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:com.orangehrm.test.LoginTest@41d477ed]" started-at="2025-03-20T23:52:39 IST" name="closeDriver" finished-at="2025-03-20T23:52:40 IST" duration-ms="365" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeDriver -->
-      </class> <!-- com.orangehrm.test.LoginTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- clickDirectory -->
+      </class> <!-- mvpautomation.OrangeHRMTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
