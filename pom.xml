@@ -67,7 +67,7 @@
 					<version>3.5.2</version>
 					<configuration>
 						<suiteXmlFiles>
-							<suiteXmlFile>testng.xml</suiteXmlFile>
+							<suiteXmlFile>orangeHRM.xml</suiteXmlFile>
 						</suiteXmlFiles>
 					</configuration>
 				</plugin>
