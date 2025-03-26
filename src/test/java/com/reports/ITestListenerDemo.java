@@ -8,13 +8,13 @@ public class ITestListenerDemo implements ITestListener {
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		ExtentReportUtils.createTest(result.getMethod().getMethodName());
+		System.out.println("Tests are started");
 
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		ExtentReportUtils.flushReport();
+		System.out.println("Tests are finished");
 	}
 
 	
