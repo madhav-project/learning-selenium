@@ -30,6 +30,7 @@ public class OrangeHRMTest {
 		sauceOptions.put("name", "Sanity Test");
 		browserOptions.setCapability("sauce:options", sauceOptions);
 		
+		@SuppressWarnings("deprecation")
 		URL url = new URL("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
 		driver = new RemoteWebDriver(url, browserOptions);
 
