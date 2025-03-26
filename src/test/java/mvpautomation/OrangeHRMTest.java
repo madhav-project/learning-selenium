@@ -12,16 +12,14 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import com.reports.*;
 
-public class OrangeHRMTest extends ExtentReportUtils {
-	RemoteWebDriver driver;	
+public class OrangeHRMTest {
+	RemoteWebDriver driver;
 
 	@Test
 	@Parameters({ "username", "password" })
 	public void loginApp(String username, String password) throws MalformedURLException {
 
-		extent.createTest("Orange HRM Demo");
 		ChromeOptions browserOptions = new ChromeOptions();
 		browserOptions.setPlatformName("Windows 10");
 		browserOptions.setBrowserVersion("latest");
@@ -35,6 +33,7 @@ public class OrangeHRMTest extends ExtentReportUtils {
 		@SuppressWarnings("deprecation")
 		URL url = new URL("https://ondemand.eu-central-1.saucelabs.com:443/wd/hub");
 		driver = new RemoteWebDriver(url, browserOptions);
+
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -43,32 +42,26 @@ public class OrangeHRMTest extends ExtentReportUtils {
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.name("password")).sendKeys(password);
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
-		extent.flush();
 
 	}
 
 	@Test(dependsOnMethods = "loginApp")
 	@Parameters({ "empname" })
 	public void clickDirectory(String empname) {
-		
-		extent.createTest("Directory click");
 
 		driver.findElement(By.xpath("//a/child::span[text()='Directory']")).click();
 		driver.findElement(By.xpath("//input[contains(@placeholder,'hints')]")).sendKeys(empname);
 
-		extent.flush();
 	}
 
 //	@Ignore
 	@Test(dependsOnMethods = "loginApp")
 	public void logout() {
-		
-		extent.createTest("Logout Demo");
 
 		driver.findElement(By.xpath("//li/span/p[contains(@class,'userdropdown-name')]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.linkText("Logout")).click();
-		extent.flush();
+
 	}
 
 	@Test(dependsOnMethods = "logout")
