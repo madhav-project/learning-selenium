@@ -9,7 +9,6 @@ public class ITestListenerDemo implements ITestListener {
 	@Override
 	public void onTestStart(ITestResult result) {
 		ExtentReportUtils.createTest(result.getMethod().getMethodName());
-
 	}
 
 	@Override

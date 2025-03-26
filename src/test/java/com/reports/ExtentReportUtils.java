@@ -24,14 +24,14 @@ public class ExtentReportUtils {
 	/*
 	 * ExtentReport object is required to create a report.
 	 */
-	public static ExtentReports report;
+	public static ExtentReports report = new ExtentReports();
 
 	/*
 	 * This method is invoked in @BeforeSuite annotation to initialize the report.
 	 */
 	public static void setUpReport() {
 //		report = new ExtentReports();
-		ExtentSparkReporter spark = new ExtentSparkReporter("reports/execution.html");
+		ExtentSparkReporter spark = new ExtentSparkReporter("D:\\existing prj\\seleniumtest\\reports\\execution.html");
 		report.attachReporter(spark);
 	}
 
